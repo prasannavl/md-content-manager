@@ -287,7 +287,7 @@ function start() {
 		.command("publish [files...]")
 		.description("publish all drafts or single provided draft")
 		.action((files, env) => {
-			runPublish(spread(opts, env.parent, files));
+			runPublish(spread(opts, env.parent, { files }));
 		});
 	
 	program
